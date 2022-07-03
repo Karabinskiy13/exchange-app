@@ -1,0 +1,49 @@
+.exchange {
+  &__header {
+    background: rgb(82, 89, 187);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  &__rates {
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  &__content {
+    padding: 100px 0;
+  }
+}
+
+.form {
+  display: flex;
+  gap: 60px;
+  max-width: 700px;
+  margin: auto;
+
+  &__group {
+    flex: 1
+  }
+
+  &__select,
+  &__input {
+    padding: 10px;
+    border: 1px solid #929292;
+    border-radius: 4px;
+  }
+
+  &__select {
+    min-width: 100px;
+    margin-right: 5px;
+    text-align: center;
+  }
+}

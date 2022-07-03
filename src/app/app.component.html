@@ -1,0 +1,25 @@
+<div class="exchange">
+  <div class="exchange__header">
+    <div class="exchange__logo">Currency Excnage</div>
+    <div class="exchange__rates" *ngIf="exchangeRates as rate">
+      <span>USD: {{ rate['usd'].uah | number}}</span>
+      <span>EUR: {{ rate['eur'].uah | number}}</span>
+    </div>
+  </div>
+  <div class="exchange__content" [formGroup]="exchangeFrom">
+    <div class="form">
+      <div class="form__group">
+        <select formControlName="sourceCurrency" class="form__select">
+        <option *ngFor="let curr of currency | keyvalue" [value]="curr.value">{{ curr.key }}</option>
+        </select>
+        <input class="form__input" type="number" formControlName="sourceValue"/>
+      </div>
+      <div class="form__group">
+        <select class="form__select" formControlName="targetCurrency">
+        <option *ngFor="let curr of currency | keyvalue" [value]="curr.value">{{ curr.key }}</option>
+        </select>
+        <input class="form__input" type="number" formControlName="targetValue"/>
+      </div>
+    </div>
+  </div>
+</div>
